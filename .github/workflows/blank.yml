@@ -16,7 +16,7 @@ jobs:
         uses: docker/setup-buildx-action@v2
       
       - name: Build the Docker image
-        run: docker build -t devops908/test-image .
+        run: docker build -t devops908/test-image ././
 
       - name: Login to Docker Registry
         run: echo "dBsGc38dn@vmnRJ" || docker login -u "devopsonline135@gmail.com" --password-stdin
