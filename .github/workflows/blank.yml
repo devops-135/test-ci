@@ -19,7 +19,7 @@ jobs:
         run: docker build -t devops908/test-image ././
 
       - name: Login to Docker Registry
-        run: echo "dBsGc38dn@vmnRJ" || docker login -u "devopsonline135@gmail.com" --password-stdin
+        run: echo "dckr_pat_w1xVLlodYc-kMGS7Nc5gVDfRbBg" || docker login -u "devops908" --password-stdin
 
       - name: Push the Docker image
         run: docker push devops908/test-image
