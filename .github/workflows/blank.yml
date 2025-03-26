@@ -16,10 +16,13 @@ jobs:
         uses: docker/setup-buildx-action@v2
       
       - name: Build the Docker image
-        run: docker build -t devops908/test-image ././
+        run: docker build -t devops908/test-image 
 
-      - name: Login to Docker Registry
-        run: echo "dckr_pat_w1xVLlodYc-kMGS7Nc5gVDfRbBg" || docker login -u "devops908" --password-stdin
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: "devops908"
+          password: "dBsGc38dn@vmnRJ"
 
       - name: Push the Docker image
         run: docker push devops908/test-image
